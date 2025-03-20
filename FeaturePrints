@@ -1,0 +1,19 @@
+print("🔴  →  Removed Feature")
+print("🟡  →  New UI Update")
+print("🟣  →  Upcoming Feature")
+print("🟠  →  Bannable  Feature")
+print("🔵  →  New Feature")
+
+print("🟡  →  FOV Changer Section")
+print("🟡  →  Ambience Section")
+print("🟡  →  Bow Pred Tab")
+print("🟣  →  More Combat/Rage Features")
+print("🟣  →  More Features Using Bullets")
+print("🟣  →  Tons More Visual Features")
+print("🔵  →  3 Different GlowStick Modifications")
+print("🟠  →  SpeedHack Is Now Bannable")
+print("🔴  →  Muncher DVD (Straight Up Didnt Work)")
+
+
+
+print("\n🚧 More updates are on the way — stay tuned!")
