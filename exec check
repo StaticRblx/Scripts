@@ -1,0 +1,28 @@
+local function detectExecutor()
+	local executor = "Unknown"
+
+	if typeof(solara) == "table" or typeof(solara) == "function" then
+		executor = "Solara"
+	elseif typeof(Wave) == "table" or typeof(Wave) == "function" then
+		executor = "Wave"
+	elseif jit and typeof(jit.attach) == "function" then
+		executor = "JJsploit"
+	elseif identifyexecutor and typeof(identifyexecutor) == "function" then
+		local success, result = pcall(identifyexecutor)
+		if success and typeof(result) == "string" and result:lower():find("delta") then
+			executor = "Delta"
+		end
+	elseif getrenv().NEZUR_LOADED ~= nil then
+		executor = "Nezur"
+	elseif typeof(is_xeno_closure) == "function" then
+		executor = "Xeno"
+	elseif getrenv().LUNA_LOADED ~= nil then
+		executor = "Luna"
+	elseif typeof(awpgg) == "table" or typeof(awpgg) == "function" then
+		executor = "Awpgg"
+	end
+
+	return executor
+end
+
+print("Detected Executor:", detectExecutor())
