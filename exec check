@@ -25,4 +25,4 @@ local function detectExecutor()
 	return executor
 end
 
-print("Detected Executor:", detectExecutor())
+print(" 👨‍💻 Detected Executor:", detectExecutor())
